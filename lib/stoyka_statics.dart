@@ -48,43 +48,179 @@ class _StoykaStaticsState extends State<StoykaStatics> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.deepOrangeAccent,
+      backgroundColor: Colors.green[100],
+      appBar: AppBar(backgroundColor: Colors.green[900],
       title: const Text('Ветровая нагрузка на стойку'),),
       body: ListView(
-            padding: EdgeInsets.all(50.0),
             children:  [
-              const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text('Область установки фасада'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Область установки фасада', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
               ),
               createListCities(),
-              const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text('Ветровая зона'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Ветровая зона', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
               ),
               createListWindZone(),
-              const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text('Наивысшая точка фасада'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Наивысшая точка фасада', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
               ),
+
               createListHighPoint(),
-              const Text('Остекление'),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Остекление', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
+              ),
+
+
               createListPanes(),
-              const Text('Расстояние между точками крепления стоек, см'),
-              TextField(controller: heightController,
-                keyboardType: TextInputType.number,),
-              const Text('Расстояние до стойки слева, см'),
-              TextField(controller: b1Controller,
-                keyboardType: TextInputType.number,),
-              const Text('Расстояние до стойки справа, см'),
-              TextField(controller: b2Controller,
-                keyboardType: TextInputType.number, ),
-              const Text('Ширина остекления, см'),
-              TextField(controller: panesWController,
-                keyboardType: TextInputType.number, ),
-              const Text('Высота остекления, см'),
-              TextField(controller: panesHController,
-                keyboardType: TextInputType.number, ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Расстояние между точками крепления стойки, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(color: Colors.green[200],
+                    child: TextField(textAlign: TextAlign.center,
+                      controller: heightController,
+                      keyboardType: TextInputType.number,),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Расстояние до стойки слева, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(color: Colors.green[200],
+                    child: TextField(textAlign: TextAlign.center,
+                      controller: b1Controller,
+                      keyboardType: TextInputType.number,),
+                  ),
+                ),
+              ),
+
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Расстояние до стойки справа', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(color: Colors.green[200],
+                    child: TextField(textAlign: TextAlign.center,
+                      controller: b2Controller,
+                      keyboardType: TextInputType.number,),
+                  ),
+                ),
+              ),
+
+
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Ширина остекления, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(color: Colors.green[200],
+                    child: TextField(textAlign: TextAlign.center,
+                      controller: panesWController,
+                      keyboardType: TextInputType.number,),
+                  ),
+                ),
+              ),
+
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(color: Colors.green[500],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Высота остекления, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        ))),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(color: Colors.green[200],
+                    child: TextField(textAlign: TextAlign.center,
+                      controller: panesHController,
+                      keyboardType: TextInputType.number,),
+                  ),
+                ),
+              ),
+
             ],
 
           ),
@@ -101,7 +237,7 @@ class _StoykaStaticsState extends State<StoykaStatics> {
           calculatek2();
           calculateJx();
 
-          print(stJx);
+          //print(stJx);
           
           showResult(context);
 
@@ -109,7 +245,7 @@ class _StoykaStaticsState extends State<StoykaStatics> {
 
 
         },
-        child: Text('Расчитать'),
+        child: const Icon(Icons.calculate),
     
       ),
 
@@ -121,160 +257,184 @@ class _StoykaStaticsState extends State<StoykaStatics> {
   }
 
   createListCities() {
-    return DropdownButton<String>(
-      value: cities,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Colors.deepPurple),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+
+        child: Container(
+          color: Colors.green[200],
+          child: DropdownButton<String>(
+            isExpanded: true,
+            value: cities,
+            icon: const Icon(Icons.arrow_downward),
+            elevation: 16,
+            style: const TextStyle(color: Colors.deepPurple),
+            onChanged: (String? newValue) {
+              setState(() {
+                cities = newValue!;
+                //print(cities);
+              });
+            },
+            items: <String>[
+              'Выбрать из списка',
+              'Винницкая область',
+              'Волынская область',
+              'Донецкая область',
+              'Житомирская область',
+              'Закарпатская область',
+              'Запорожская область',
+              'Ивано-Франковская область',
+              'Киевская область',
+              'Кировоградская область',
+              'Луганская область',
+              'Львовская область',
+              'Николаевская область',
+              'Одесская область',
+              'Полтавская область',
+              'Ровенская область',
+              'Сумская область',
+              'Тернопольская область',
+              'Харьковская область',
+              'Херсонская область',
+              'Хмельницкая область',
+              'Черкасская область',
+              'Черновицкая область',
+              'Черниговская область'
+            ]
+                .map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
+          ),
+        ),
       ),
-      onChanged: (String? newValue) {
-        setState(() {
-          cities = newValue!;
-          //print(cities);
-        });
-      },
-      items: <String>[
-        'Выбрать из списка',
-        'Винницкая область',
-        'Волынская область',
-        'Донецкая область',
-        'Житомирская область',
-        'Закарпатская область',
-        'Запорожская область',
-        'Ивано-Франковская область',
-        'Киевская область',
-        'Кировоградская область',
-        'Луганская область',
-        'Львовская область',
-        'Николаевская область',
-        'Одесская область',
-        'Полтавская область',
-        'Ровенская область',
-        'Сумская область',
-        'Тернопольская область',
-        'Харьковская область',
-        'Херсонская область',
-        'Хмельницкая область',
-        'Черкасская область',
-        'Черновицкая область',
-        'Черниговская область'
-      ]
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
     );
 
   }
 
   createListWindZone() {
-    return DropdownButton<String>(
-      borderRadius: BorderRadius.circular(20),
-      isExpanded: true,
-      value: windZone,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Colors.deepPurple,),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
-      ),
-      onChanged: (String? newValue) {
-        setState(() {
-          windZone = newValue!;
-          //print(windZone);
-        });
-      },
-      items: <String>[
-        'Выбрать из списка',
-        '1  - Открытые поверхности морей, озёр, плоские \n равнины без препятствий, подвергающиеся \n действию ветра на участке длиной не менее 3 км',
-        '2 - Сельская местность с оградами, небольшими \n сооружениями, домами и деревьями',
-        '3 - Пригородные и промышленные зоны, \n протяжённые лесные массивы',
-        '4 - Городские территории,  на которых не менее \n 15% поверхности заняты зданиями, \n высотой более 15 метров'
-      ]
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value, maxLines: 7,),
-          // child: Text(value) ,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Container(
+          color: Colors.green[200],
+          child: DropdownButton<String>(
+            borderRadius: BorderRadius.circular(20),
+            isExpanded: true,
+            value: windZone,
+            icon: const Icon(Icons.arrow_downward),
+            elevation: 16,
+            style: const TextStyle(color: Colors.deepPurple),
+            onChanged: (String? newValue) {
+              setState(() {
+                windZone = newValue!;
+                //print(windZone);
+              });
+            },
+            items: <String>[
+              'Выбрать из списка',
+              '1  - Открытые поверхности морей, озёр, плоские \n равнины без препятствий, подвергающиеся \n действию ветра на участке длиной не менее 3 км',
+              '2 - Сельская местность с оградами, небольшими \n сооружениями, домами и деревьями',
+              '3 - Пригородные и промышленные зоны, \n протяжённые лесные массивы',
+              '4 - Городские территории,  на которых не менее \n 15% поверхности заняты зданиями, \n высотой более 15 метров'
+            ]
+                .map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value, maxLines: 7,),
+                // child: Text(value) ,
 
-        );
-      }).toList(),
+              );
+            }).toList(),
+          ),
+        ),
+      ),
     );
   }
 
   createListHighPoint() {
-    return DropdownButton<String>(
-      value: highPoint,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Colors.deepPurple),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Container(
+          color: Colors.green[200],
+          child: DropdownButton<String>(
+            isExpanded: true,
+            value: highPoint,
+            icon: const Icon(Icons.arrow_downward),
+            elevation: 16,
+            style: const TextStyle(color: Colors.deepPurple),
+            onChanged: (String? newValue) {
+              setState(() {
+                highPoint = newValue!;
+                //print(highPoint);
+              });
+            },
+            items: <String>[
+              'Выбрать из списка',
+              'до 10 метров',
+              '10 - 15 метров',
+              '15 - 20 метров',
+              '20 - 30 метров',
+              '30 - 40 метров',
+              '40 - 50 метров',
+              '50 - 60 метров',
+              '60 - 70 метров',
+              '70 - 80 метров',
+              '80 - 90 метров',
+              '90 - 100 метров'
+            ]
+                .map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
+          ),
+        ),
       ),
-      onChanged: (String? newValue) {
-        setState(() {
-          highPoint = newValue!;
-          //print(highPoint);
-        });
-      },
-      items: <String>[
-        'Выбрать из списка',
-        'до 10 метров',
-        '10 - 15 метров',
-        '15 - 20 метров',
-        '20 - 30 метров',
-        '30 - 40 метров',
-        '40 - 50 метров',
-        '50 - 60 метров',
-        '60 - 70 метров',
-        '70 - 80 метров',
-        '80 - 90 метров',
-        '90 - 100 метров'
-      ]
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
     );
   }
 
   createListPanes() {
-    return DropdownButton<String>(
-      value: panes,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Colors.deepPurple),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
-      ),
-      onChanged: (String? newValue) {
-        setState(() {
-          panes = newValue!;
-          //print(highPoint);
-        });
-      },
-      items: <String>[
-        'Выбрать из списка',
-        'Стекло',
-        'Стеклопакет'
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Container(
+          color: Colors.green[200],
+          child: DropdownButton<String>(
+            isExpanded: true,
+            value: panes,
+            icon: const Icon(Icons.arrow_downward),
+            elevation: 16,
+            style: const TextStyle(color: Colors.deepPurple),
+            onChanged: (String? newValue) {
+              setState(() {
+                panes = newValue!;
+                //print(highPoint);
+              });
+            },
+            items: <String>[
+              'Выбрать из списка',
+              'Стекло',
+              'Стеклопакет'
 
-      ]
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
+            ]
+                .map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
+          ),
+        ),
+      ),
     );
   }
 

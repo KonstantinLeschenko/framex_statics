@@ -33,30 +33,87 @@ class _RigelStaticsState extends State<RigelStatics> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green[100],
       appBar: AppBar(
-        backgroundColor: Colors.deepOrangeAccent,
+        backgroundColor: Colors.green[900],
         title: const Text('Статическая нагрузка на ригель'),
       ),
-      body: ListView(
-        children: [
-          const Text('Расстояние между осями стоек (по ширине), см'),
-          TextField(controller: rigLController,
-            keyboardType: TextInputType.number,),
-          const Text('Расстояние между осями ригелей (по высоте), см'),
-          TextField(controller: rigHController,
-            keyboardType: TextInputType.number,),
-          const Text('Суммарная толщина стёкол, см'),
-          TextField(controller: glassController,
-            keyboardType: TextInputType.number,),
-          //const Text('Момент инерции ригеля без учёта соббственного веса (Jx1)'),
-          //Text(rigJx1.toString())
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                  child: Container(color: Colors.green[500],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('Расстояние между осями стоек (по ширине), см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                      ))),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(color: Colors.green[200],
+                  child: TextField(textAlign: TextAlign.center,
+                    controller: rigLController,
+                    keyboardType: TextInputType.number,),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(color: Colors.green[500],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('Расстояние между осями ригелей (по высоте), см', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
+                      ))),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(color: Colors.green[200],
+                  child: TextField(textAlign: TextAlign.center,
+                    controller: rigHController,
+                    keyboardType: TextInputType.number,),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(color: Colors.green[500],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('Суммарная толщина стёкол, см', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
+                      ))),
+            ),
 
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(color: Colors.green[200],
+                  child: TextField(textAlign: TextAlign.center,
+                    controller: glassController,
+                    keyboardType: TextInputType.number,),
+                ),
+              ),
+            ),
 
-        ],
+          ],
 
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(onPressed: () {
+
         rigL = double.parse(rigLController.text);
         rigH = double.parse(rigHController.text);
         f = double.parse(glassController.text);
@@ -65,13 +122,15 @@ class _RigelStaticsState extends State<RigelStatics> {
 
         rigJx1 = (glassWeight * a * (3 * rigL * rigL - 4 * a * a)) / (24 * modulE * fdop);
 
-        print(rigJx1);
+        //print(rigJx1);
 
         showRigJx1(context);
 
 
 
       },
+        backgroundColor: Colors.blue[300],
+        child: const Icon(Icons.calculate),
 
       ),
 
