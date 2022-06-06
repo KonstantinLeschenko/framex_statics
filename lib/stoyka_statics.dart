@@ -58,8 +58,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Область установки фасада', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
@@ -69,8 +69,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Ветровая зона', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
@@ -80,8 +80,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Наивысшая точка фасада', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
@@ -93,8 +93,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Остекление', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
@@ -107,8 +107,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Расстояние между точками крепления стойки, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
@@ -130,8 +130,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Расстояние до стойки слева, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
@@ -154,8 +154,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Расстояние до стойки справа', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
@@ -179,8 +179,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Ширина остекления, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
@@ -203,8 +203,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Container(color: Colors.green[500],
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text('Высота остекления, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),

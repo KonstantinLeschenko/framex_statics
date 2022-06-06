@@ -9,10 +9,10 @@ void main() => runApp(MaterialApp(
 
   initialRoute: '/',
   routes: {
-        '/': (context) => Home(),
-    '/stoyka': (context) => StoykaStatics(),
-    '/rigel': (context) => RigelStatics(),
-    '/info': (context) => InfoPage()
+    '/': (context) => const Home(),
+    '/stoyka': (context) => const StoykaStatics(),
+    '/rigel': (context) => const RigelStatics(),
+    '/info': (context) => const InfoPage()
 
 
   },

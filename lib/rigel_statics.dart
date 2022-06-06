@@ -47,8 +47,8 @@ class _RigelStaticsState extends State<RigelStatics> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                   child: Container(color: Colors.green[500],
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Text('Расстояние между осями стоек (по ширине), см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                       ))),
             ),
@@ -68,8 +68,8 @@ class _RigelStaticsState extends State<RigelStatics> {
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Container(color: Colors.green[500],
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Text('Расстояние между осями ригелей (по высоте), см', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
                       ))),
             ),
@@ -89,8 +89,8 @@ class _RigelStaticsState extends State<RigelStatics> {
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Container(color: Colors.green[500],
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Text('Суммарная толщина стёкол, см', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
                       ))),
             ),
