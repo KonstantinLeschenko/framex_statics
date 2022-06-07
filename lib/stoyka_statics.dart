@@ -109,7 +109,7 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                     child: Container(color: Colors.grey[400],
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Расстояние между точками крепления стойки, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                          child: Text('Расстояние между точками крепления стойки, мм', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
 
@@ -132,7 +132,7 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                     child: Container(color: Colors.grey[400],
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Расстояние до стойки слева, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                          child: Text('Расстояние до стойки слева, мм', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
 
@@ -156,7 +156,7 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                     child: Container(color: Colors.grey[400],
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Расстояние до стойки справа', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                          child: Text('Расстояние до стойки справа, мм', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
 
@@ -181,7 +181,7 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                     child: Container(color: Colors.grey[400],
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Ширина остекления, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                          child: Text('Ширина остекления, мм', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
 
@@ -205,7 +205,7 @@ class _StoykaStaticsState extends State<StoykaStatics> {
                     child: Container(color: Colors.grey[400],
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Высота остекления, см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                          child: Text('Высота остекления, мм', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                         ))),
               ),
 
@@ -548,7 +548,7 @@ class _StoykaStaticsState extends State<StoykaStatics> {
   }
 
   void calculateFdop() {
-    l = double.parse(heightController.text);
+    l = double.parse(heightController.text) / 10;
     if (panes == 'Выбрать из списка') lDel = 1000;
     if (panes == 'Стекло') lDel = 200;
     if (panes == 'Стеклопакет') lDel = 300;
@@ -560,8 +560,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
   }
 
   void calculateW() {
-    b1 = double.parse(b1Controller.text) / 100;
-    b2 = double.parse(b2Controller.text) / 100;
+    b1 = double.parse(b1Controller.text) / 1000;
+    b2 = double.parse(b2Controller.text) / 1000;
     w = we * (b1 + b2) / 2;
   }
 
@@ -572,17 +572,17 @@ class _StoykaStaticsState extends State<StoykaStatics> {
     panesH = double.parse(panesHController.text);
     panesW = double.parse(panesWController.text);
 
-    if (panesH*10 < 2400 && panesW*10 < 2400) k1 = 1;
-    if ((panesH*10 > 2400 && panesH*10 <= 2500) || (panesW*10 > 2400 && panesW*10 <= 2500)) k1 = 1.04;
-    if ((panesH*10 > 2500 && panesH*10 <= 2600) || (panesW*10 > 2500 && panesW*10 <= 2600)) k1 = 1.08;
-    if ((panesH*10 > 2600 && panesH*10 <= 2700) || (panesW*10 > 2600 && panesW*10 <= 2700)) k1 = 1.12;
-    if ((panesH*10 > 2700 && panesH*10 <= 2800) || (panesW*10 > 2700 && panesW*10 <= 2800)) k1 = 1.17;
-    if ((panesH*10 > 2800 && panesH*10 <= 2900) || (panesW*10 > 2800 && panesW*10 <= 2900)) k1 = 1.21;
-    if ((panesH*10 > 2900 && panesH*10 <= 3000) || (panesW*10 > 2900 && panesW*10 <= 3000)) k1 = 1.25;
-    if ((panesH*10 > 3000 && panesH*10 <= 3250) || (panesW*10 > 3000 && panesW*10 <= 3250)) k1 = 1.35;
-    if ((panesH*10 > 3250 && panesH*10 <= 3500) || (panesW*10 > 3250 && panesW*10 <= 3500)) k1 = 1.46;
-    if ((panesH*10 > 3500 && panesH*10 <= 3750) || (panesW*10 > 3500 && panesW*10 <= 3750)) k1 = 1.56;
-    if ((panesH*10 > 3750 && panesH*10 <= 4000) || (panesW*10 > 3750 && panesW*10 <= 4000)) k1 = 1.67;
+    if (panesH < 2400 && panesW < 2400) k1 = 1;
+    if ((panesH > 2400 && panesH <= 2500) || (panesW > 2400 && panesW <= 2500)) k1 = 1.04;
+    if ((panesH > 2500 && panesH <= 2600) || (panesW > 2500 && panesW <= 2600)) k1 = 1.08;
+    if ((panesH > 2600 && panesH <= 2700) || (panesW > 2600 && panesW <= 2700)) k1 = 1.12;
+    if ((panesH > 2700 && panesH <= 2800) || (panesW > 2700 && panesW <= 2800)) k1 = 1.17;
+    if ((panesH > 2800 && panesH <= 2900) || (panesW > 2800 && panesW <= 2900)) k1 = 1.21;
+    if ((panesH > 2900 && panesH <= 3000) || (panesW > 2900 && panesW <= 3000)) k1 = 1.25;
+    if ((panesH > 3000 && panesH <= 3250) || (panesW > 3000 && panesW <= 3250)) k1 = 1.35;
+    if ((panesH > 3250 && panesH <= 3500) || (panesW > 3250 && panesW <= 3500)) k1 = 1.46;
+    if ((panesH > 3500 && panesH <= 3750) || (panesW > 3500 && panesW <= 3750)) k1 = 1.56;
+    if ((panesH > 3750 && panesH <= 4000) || (panesW > 3750 && panesW <= 4000)) k1 = 1.67;
 
   }
 
@@ -597,8 +597,8 @@ class _StoykaStaticsState extends State<StoykaStatics> {
     if (panesH >= panesW) pL = panesH / panesW;
     if (panesH < panesW) pL = panesW / panesH;
 
-    if (panesH >= panesW) len = panesH * 10;
-    if (panesH < panesW) len = panesW * 10;
+    if (panesH >= panesW) len = panesH;
+    if (panesH < panesW) len = panesW;
 
 
     if (len <= 2400) k2 = 1;

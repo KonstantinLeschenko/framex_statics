@@ -49,7 +49,7 @@ class _RigelStaticsState extends State<RigelStatics> {
                   child: Container(color: Colors.grey[400],
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Расстояние между осями стоек (по ширине), см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
+                        child: Text('Расстояние между осями стоек (по ширине), мм', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
                       ))),
             ),
             Padding(
@@ -70,7 +70,7 @@ class _RigelStaticsState extends State<RigelStatics> {
                   child: Container(color: Colors.grey[400],
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Расстояние между осями ригелей (по высоте), см', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
+                        child: Text('Расстояние между осями ригелей (по высоте), мм', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
                       ))),
             ),
             Padding(
@@ -91,7 +91,7 @@ class _RigelStaticsState extends State<RigelStatics> {
                   child: Container(color: Colors.grey[400],
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Суммарная толщина стёкол, см', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
+                        child: Text('Суммарная толщина стёкол, мм', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
                       ))),
             ),
 
@@ -114,9 +114,9 @@ class _RigelStaticsState extends State<RigelStatics> {
 
       floatingActionButton: FloatingActionButton(onPressed: () {
 
-        rigL = double.parse(rigLController.text);
-        rigH = double.parse(rigHController.text);
-        f = double.parse(glassController.text);
+        rigL = double.parse(rigLController.text) / 10;
+        rigH = double.parse(rigHController.text) / 10;
+        f = double.parse(glassController.text) / 10;
         a = rigL / 10;
         glassWeight = (rigL * rigH * g * f) / 2 * kH;
 
