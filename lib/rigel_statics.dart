@@ -33,9 +33,9 @@ class _RigelStaticsState extends State<RigelStatics> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[100],
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        backgroundColor: Colors.green[900],
+        backgroundColor: Colors.grey[800],
         title: const Text('Статическая нагрузка на ригель'),
       ),
       body: Padding(
@@ -46,7 +46,7 @@ class _RigelStaticsState extends State<RigelStatics> {
               padding: const EdgeInsets.all(8.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                  child: Container(color: Colors.green[500],
+                  child: Container(color: Colors.grey[400],
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text('Расстояние между осями стоек (по ширине), см', style: TextStyle(fontSize: 20,), textAlign: TextAlign.center,),
@@ -56,7 +56,7 @@ class _RigelStaticsState extends State<RigelStatics> {
               padding: const EdgeInsets.all(8.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                child: Container(color: Colors.green[200],
+                child: Container(color: Colors.grey[300],
                   child: TextField(textAlign: TextAlign.center,
                     controller: rigLController,
                     keyboardType: TextInputType.number,),
@@ -67,7 +67,7 @@ class _RigelStaticsState extends State<RigelStatics> {
               padding: const EdgeInsets.all(8.0),
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Container(color: Colors.green[500],
+                  child: Container(color: Colors.grey[400],
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text('Расстояние между осями ригелей (по высоте), см', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
@@ -77,7 +77,7 @@ class _RigelStaticsState extends State<RigelStatics> {
               padding: const EdgeInsets.all(8.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                child: Container(color: Colors.green[200],
+                child: Container(color: Colors.grey[300],
                   child: TextField(textAlign: TextAlign.center,
                     controller: rigHController,
                     keyboardType: TextInputType.number,),
@@ -88,7 +88,7 @@ class _RigelStaticsState extends State<RigelStatics> {
               padding: const EdgeInsets.all(8.0),
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Container(color: Colors.green[500],
+                  child: Container(color: Colors.grey[400],
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text('Суммарная толщина стёкол, см', style: TextStyle(fontSize: 18,), textAlign: TextAlign.center,),
@@ -99,7 +99,7 @@ class _RigelStaticsState extends State<RigelStatics> {
               padding: const EdgeInsets.all(8.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                child: Container(color: Colors.green[200],
+                child: Container(color: Colors.grey[300],
                   child: TextField(textAlign: TextAlign.center,
                     controller: glassController,
                     keyboardType: TextInputType.number,),
@@ -129,7 +129,7 @@ class _RigelStaticsState extends State<RigelStatics> {
 
 
       },
-        backgroundColor: Colors.blue[300],
+        backgroundColor: Colors.blueGrey,
         child: const Icon(Icons.calculate),
 
       ),

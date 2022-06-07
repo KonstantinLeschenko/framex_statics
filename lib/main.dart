@@ -5,7 +5,7 @@ import 'package:framex_statics/rigel_statics.dart';
 import 'package:framex_statics/stoyka_statics.dart';
 
 void main() => runApp(MaterialApp(
-      theme: ThemeData(primaryColor: Colors.deepOrangeAccent),
+      theme: ThemeData(primaryColor: Colors.grey[900]),
 
   initialRoute: '/',
   routes: {
