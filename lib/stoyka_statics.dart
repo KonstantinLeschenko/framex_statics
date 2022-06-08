@@ -265,50 +265,53 @@ class _StoykaStaticsState extends State<StoykaStatics> {
 
         child: Container(
           color: Colors.grey[300],
-          child: DropdownButton<String>(
-            isExpanded: true,
-            value: cities,
-            icon: const Icon(Icons.arrow_downward),
-            elevation: 16,
-            style: const TextStyle(color: Colors.deepPurple),
-            onChanged: (String? newValue) {
-              setState(() {
-                cities = newValue!;
-                //print(cities);
-              });
-            },
-            items: <String>[
-              'Выбрать из списка',
-              'Винницкая область',
-              'Волынская область',
-              'Донецкая область',
-              'Житомирская область',
-              'Закарпатская область',
-              'Запорожская область',
-              'Ивано-Франковская область',
-              'Киевская область',
-              'Кировоградская область',
-              'Луганская область',
-              'Львовская область',
-              'Николаевская область',
-              'Одесская область',
-              'Полтавская область',
-              'Ровенская область',
-              'Сумская область',
-              'Тернопольская область',
-              'Харьковская область',
-              'Херсонская область',
-              'Хмельницкая область',
-              'Черкасская область',
-              'Черновицкая область',
-              'Черниговская область'
-            ]
-                .map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: DropdownButton<String>(
+              isExpanded: true,
+              value: cities,
+              icon: const Icon(Icons.arrow_downward),
+              elevation: 16,
+              style: const TextStyle(color: Colors.deepPurple),
+              onChanged: (String? newValue) {
+                setState(() {
+                  cities = newValue!;
+                  //print(cities);
+                });
+              },
+              items: <String>[
+                'Выбрать из списка',
+                'Винницкая область',
+                'Волынская область',
+                'Донецкая область',
+                'Житомирская область',
+                'Закарпатская область',
+                'Запорожская область',
+                'Ивано-Франковская область',
+                'Киевская область',
+                'Кировоградская область',
+                'Луганская область',
+                'Львовская область',
+                'Николаевская область',
+                'Одесская область',
+                'Полтавская область',
+                'Ровенская область',
+                'Сумская область',
+                'Тернопольская область',
+                'Харьковская область',
+                'Херсонская область',
+                'Хмельницкая область',
+                'Черкасская область',
+                'Черновицкая область',
+                'Черниговская область'
+              ]
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
           ),
         ),
       ),
@@ -323,34 +326,37 @@ class _StoykaStaticsState extends State<StoykaStatics> {
         borderRadius: BorderRadius.circular(20),
         child: Container(
           color: Colors.grey[300],
-          child: DropdownButton<String>(
-            borderRadius: BorderRadius.circular(20),
-            isExpanded: true,
-            value: windZone,
-            icon: const Icon(Icons.arrow_downward),
-            elevation: 16,
-            style: const TextStyle(color: Colors.deepPurple),
-            onChanged: (String? newValue) {
-              setState(() {
-                windZone = newValue!;
-                //print(windZone);
-              });
-            },
-            items: <String>[
-              'Выбрать из списка',
-              '1  - Открытые поверхности морей, озёр, плоские \n равнины без препятствий, подвергающиеся \n действию ветра на участке длиной не менее 3 км',
-              '2 - Сельская местность с оградами, небольшими \n сооружениями, домами и деревьями',
-              '3 - Пригородные и промышленные зоны, \n протяжённые лесные массивы',
-              '4 - Городские территории,  на которых не менее \n 15% поверхности заняты зданиями, \n высотой более 15 метров'
-            ]
-                .map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value, maxLines: 7,),
-                // child: Text(value) ,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: DropdownButton<String>(
+              borderRadius: BorderRadius.circular(20),
+              isExpanded: true,
+              value: windZone,
+              icon: const Icon(Icons.arrow_downward),
+              elevation: 16,
+              style: const TextStyle(color: Colors.deepPurple),
+              onChanged: (String? newValue) {
+                setState(() {
+                  windZone = newValue!;
+                  //print(windZone);
+                });
+              },
+              items: <String>[
+                'Выбрать из списка',
+                '1  - Открытые поверхности морей, озёр, плоские \n равнины без препятствий, подвергающиеся \n действию ветра на участке длиной не менее 3 км',
+                '2 - Сельская местность с оградами, небольшими \n сооружениями, домами и деревьями',
+                '3 - Пригородные и промышленные зоны, \n протяжённые лесные массивы',
+                '4 - Городские территории,  на которых не менее \n 15% поверхности заняты зданиями, \n высотой более 15 метров'
+              ]
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value, maxLines: 7,),
+                  // child: Text(value) ,
 
-              );
-            }).toList(),
+                );
+              }).toList(),
+            ),
           ),
         ),
       ),
@@ -364,38 +370,41 @@ class _StoykaStaticsState extends State<StoykaStatics> {
         borderRadius: BorderRadius.circular(20),
         child: Container(
           color: Colors.grey[300],
-          child: DropdownButton<String>(
-            isExpanded: true,
-            value: highPoint,
-            icon: const Icon(Icons.arrow_downward),
-            elevation: 16,
-            style: const TextStyle(color: Colors.deepPurple),
-            onChanged: (String? newValue) {
-              setState(() {
-                highPoint = newValue!;
-                //print(highPoint);
-              });
-            },
-            items: <String>[
-              'Выбрать из списка',
-              'до 10 метров',
-              '10 - 15 метров',
-              '15 - 20 метров',
-              '20 - 30 метров',
-              '30 - 40 метров',
-              '40 - 50 метров',
-              '50 - 60 метров',
-              '60 - 70 метров',
-              '70 - 80 метров',
-              '80 - 90 метров',
-              '90 - 100 метров'
-            ]
-                .map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: DropdownButton<String>(
+              isExpanded: true,
+              value: highPoint,
+              icon: const Icon(Icons.arrow_downward),
+              elevation: 16,
+              style: const TextStyle(color: Colors.deepPurple),
+              onChanged: (String? newValue) {
+                setState(() {
+                  highPoint = newValue!;
+                  //print(highPoint);
+                });
+              },
+              items: <String>[
+                'Выбрать из списка',
+                'до 10 метров',
+                '10 - 15 метров',
+                '15 - 20 метров',
+                '20 - 30 метров',
+                '30 - 40 метров',
+                '40 - 50 метров',
+                '50 - 60 метров',
+                '60 - 70 метров',
+                '70 - 80 метров',
+                '80 - 90 метров',
+                '90 - 100 метров'
+              ]
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
           ),
         ),
       ),
@@ -409,30 +418,33 @@ class _StoykaStaticsState extends State<StoykaStatics> {
         borderRadius: BorderRadius.circular(20),
         child: Container(
           color: Colors.grey[300],
-          child: DropdownButton<String>(
-            isExpanded: true,
-            value: panes,
-            icon: const Icon(Icons.arrow_downward),
-            elevation: 16,
-            style: const TextStyle(color: Colors.deepPurple),
-            onChanged: (String? newValue) {
-              setState(() {
-                panes = newValue!;
-                //print(highPoint);
-              });
-            },
-            items: <String>[
-              'Выбрать из списка',
-              'Стекло',
-              'Стеклопакет'
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: DropdownButton<String>(
+              isExpanded: true,
+              value: panes,
+              icon: const Icon(Icons.arrow_downward),
+              elevation: 16,
+              style: const TextStyle(color: Colors.deepPurple),
+              onChanged: (String? newValue) {
+                setState(() {
+                  panes = newValue!;
+                  //print(highPoint);
+                });
+              },
+              items: <String>[
+                'Выбрать из списка',
+                'Стекло',
+                'Стеклопакет'
 
-            ]
-                .map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
+              ]
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
           ),
         ),
       ),
